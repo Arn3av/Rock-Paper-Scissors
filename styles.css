@@ -1,0 +1,297 @@
+/* @import url('https://fonts.google.com/specimen/Barlow+Semi+Condensed'); */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    height: 100vh; width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    background: radial-gradient(circle, hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    font-weight: 700;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+}
+.header-box{
+    border: 4px solid;
+    border-radius: 18px;
+    border-color: hsl(217, 16%, 45%); 
+    height: 15vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row; 
+    padding: 1.5%;
+}
+.header-box .game-heading{
+    color: white;
+    padding: 0px;
+    width: 20%;
+    font-weight: 600;
+    font-size: 43px;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8;
+}
+.header-box .score-box{
+    width: 15%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-left: auto;
+    padding: 2.5%;
+    font-weight: 600;
+}
+.score-heading{
+    display: flex;
+    font-size: large;
+    letter-spacing: +2.5px;
+    color: hsl(229, 64%, 46%);
+}
+.user-score{
+    margin-top: auto;
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+    font-size: 43px;
+}
+.rules-button{
+    position: absolute;
+    font-weight: 600;
+    bottom: 2%;
+    right: 5%;
+    color: white;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    padding: 1% 3%;
+    cursor: pointer;
+    letter-spacing: +2px;
+}
+.rules-button:active{
+    transform: translateY(2px);
+}
+.Triangle{
+    z-index: 200;
+    margin-top: 17vh;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.triangle_image{
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 43%;
+    width: 19.5%;
+    transform: translateY(100%);
+}
+.Triangle .first-column{
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(-30%);
+}
+.Triangle .outer-scissor-div{
+    margin-left: auto;
+}
+.outer-scissor-div{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+    padding: 5%;
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    scale: 1.1;
+}
+.scissors-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.paper-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.rock-div{
+    box-shadow: 0px 4px 0px 1px rgba(0, 0, 0, 0.1)inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.outer-rock-div{
+    height: fit-content;
+    width: fit-content;
+    padding: 5%;
+    border-radius: 100%;
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    scale: 1.1;
+}
+
+.outer-paper-div{
+    padding: 5%;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    scale: 1.1;
+}
+
+.Triangle .second-column{
+    transform: translateX(31%);
+}
+
+.option {
+    transition: 300ms;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.option:hover {
+    transform: scale(1.21);
+}
+
+.option:active {
+    transform: scale(0.8);
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 120%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 950;
+    pointer-events: all;
+    display: none;
+}
+.rules-window{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.5%;
+    border-radius: 12px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20.5%;
+    height: 47%;
+    z-index: 1000;
+    display: none;
+}
+.rules-window .rules-heading-line{
+    width: 100%;
+    display: flex;
+    margin-bottom: 6%;
+    justify-content: space-between;
+    font-size: 28px;
+    color: hsl(229, 25%, 31%);
+}
+.close-icon{
+    padding: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.rules-window .rules-image{
+    object-fit: contain;
+}
+
+.hidden{
+    color: white;
+    width: 36%;
+    display: none;
+    justify-content: space-between;
+    font-size: 23px;
+    margin-bottom: 3%;
+}
+.hidden .hidden-text{
+    font-weight: 600;
+    letter-spacing: +2px;
+}
+.hidden-image-box{
+    transition: display 2s ease-in-out;
+    width: 37%;
+    margin-right: 2.4%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden-image-box #user-choice #house-choice{
+    margin-left: none;
+}
+
+#house-choice{
+    display: none;
+}
+
+.empty-circle{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 32%;
+    scale: 0.9;
+    border-radius: 100%;
+}
+
+.hidden-image-box .display-result{
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 5%;
+    justify-content: center;
+    /* margin-left: auto; */
+    display: none;
+}
+.display-result .play-again{
+    margin-top: 10%;
+    font-size: medium;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background-color: white;
+    padding: 7.5% 20%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    color: hsl(229, 25%, 31%);
+    letter-spacing: +2.5px;
+}
+
+.winning_circles{
+    height: fit-content;
+    width: fit-content;
+    padding: 4%;
+    background-color: black;
+    opacity: 0.2;
+}

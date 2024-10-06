@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="overlay" id="overlay-div"></div>
+    <div class="middle-div"></div>
+    <div class="rules-window" id="rules-box">
+        <div class="rules-heading-line">RULES
+            <div class="close-icon" id="close-button"><img src="images/icon-close.svg" alt="close"/></div>
+        </div>
+        <div class="rules-image"><img src="images/image-rules.svg" alt="Rules"/> </div>
+    </div>
+    <div class="header-box">
+        <div class="game-heading">
+            ROCK PAPER SCISSORS
+        </div>
+        <div class="score-box">
+            <span class="score-heading">SCORE</span>
+            <span class="user-score" id="score-text">0</span>    
+        </div>
+    </div>
+    <div class="Triangle">
+        <div class="first-column">
+            <div class="outer-paper-div option" id="paper"><div class="paper-div"><img src="images/icon-paper.svg" alt="Paper"/></div></div>
+            <div class="outer-scissor-div option" id="scissors"><div class="scissors-div"><img src="images/icon-scissors.svg" alt="Scissors"/></div></div>
+        </div>
+        <div class="second-column">
+            <div class="outer-rock-div option" id="rock">
+                <div class="rock-div">
+                    <img src="images/icon-rock.svg" alt="Rock">
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="triangle_image" id="trai-image" src="images/bg-triangle.svg" alt="Equilateral Triangle"/>
+    <div class="hidden" id="hidden-label">
+        <span class="hidden-text">YOU PICKED</span>
+        <span class="hidden-text">THE HOUSE PICKED</span>
+    </div>
+    <div class="hidden-image-box" id="hidden-step-div">
+        <div id="user-choice"></div>
+        <div class="display-result" id="result-div">
+            <span id="result-text">YOU WIN</span>
+            <div class="play-again" id="play-button">
+                PLAY AGAIN
+            </div>
+        </div> 
+        <div id="house-choice"></div>
+        <div class="empty-circle" id="transition-state"></div>
+    </div>    
+    <div class="rules-button" id="rules">RULES</div>
+    <script src="script.js"></script>
+</body>
+</html>
