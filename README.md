@@ -1,4 +1,4 @@
 # Rock, Paper, Scissors
 
-!(./design/desktop-preview.png)
+![This is a Preview](./design/desktop-preview.png)
 
